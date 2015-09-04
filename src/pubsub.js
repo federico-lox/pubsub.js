@@ -53,7 +53,7 @@
 				if (subs) {
 					len = subs.length;
 					params = (args.length > 1) ?
-							Array.prototype.splice.call(args, 1) : [];
+							Array.prototype.splice.call(args, 1, args.length-1) : [];
 
 					//run the callbacks asynchronously,
 					//do not block the main execution process
