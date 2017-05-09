@@ -159,7 +159,9 @@
 	//UMD
 	if (typeof define === 'function' && define.amd) {
 		//AMD module
-		define('pubsub', init);
+		define(function() {
+			return init;
+		});
 	} else if (typeof module === 'object' && module.exports) {
 		//CommonJS module
 		module.exports = init();
